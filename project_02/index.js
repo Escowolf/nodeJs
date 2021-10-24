@@ -3,10 +3,10 @@ const app = express(); //instanciando o app para utilizar node
 //var nomeFunc = require("./nome");//chama módulo nome com função nome
 
 //nomeFunc("Ezequiel Sousa Silva");
-app.listen(4000,function(erro){  // cria a aplicação na porta 4000
+app.listen(4000,function(erro){  // cria a aplicação na porta 4000 e chama a função de callback
     if (erro){
         console.log("Erro ao Iniciar.");
     }else{
-        console.log("Servidor Iniciado.");
+        console.log("Servidor Iniciado na porta: http://localhost:4000/");
     }
 })
