@@ -5,6 +5,7 @@ function areaTriangulo(b, h) {
 function areaQuadrado(b, h) {
     return b * h;
 }
+areaQuadrado(2,2);
 
 module.exports = {
     areaTriangulo,
