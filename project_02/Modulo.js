@@ -1,7 +1,11 @@
 const express = require("express");//carregando módulo express do Node
 const app = express(); //instanciando o app para utilizar node
 
-var calc = require("./Funcoes");
+var calc = require("./Funcoes");//chamando as funções fora do node
+
+app.get("/",function(req,res){
+    res.send("<h1>Módulo</h1>");
+});
 
 app.get("/quadrado/", function(req,res){
     res.send("<h1>A área do quadrado é: "+calc.areaQuadrado(8,8)+"</h1>"); 
