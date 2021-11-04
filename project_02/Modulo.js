@@ -15,7 +15,7 @@ app.get("/triangulo/",function(req,res){
     res.send("<h1>A área do triângulo é: "+calc.areaTriangulo(2,4)+"</h1>");
 })
 
-app.listen(3000,function(erro){  // cria a aplicação na porta 4000 e chama a função de callback
+app.listen(4000,function(erro){  // cria a aplicação na porta 4000 e chama a função de callback
     if (erro){
         console.log("Erro ao Iniciar.");
     }else{
