@@ -25,10 +25,10 @@ app.get("/idade/", function(req,res){
     
 })
 
-app.listen(4001,function(erro){  // cria a aplicação na porta 4000 e chama a função de callback
+app.listen(4002,function(erro){  // cria a aplicação na porta 4000 e chama a função de callback
     if (erro){
         console.log("Erro ao Iniciar.");
     }else{
-        console.log("Servidor Iniciado na porta: http://localhost:4001/");
+        console.log("Servidor Iniciado na porta: http://localhost:4000/");
     }
 })
