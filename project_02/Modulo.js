@@ -8,7 +8,7 @@ app.get("/",function(req,res){
 });
 
 app.get("/quadrado/", function(req,res){
-    res.send("<h1>A área do quadrado é: "+calc.areaQuadrado(8,8)+"</h1>"); 
+    res.send("<h1>A área do quadrado é: "+calc.areaQuadrado(5,5)+"</h1>"); 
  })
 
 app.get("/triangulo/",function(req,res){
