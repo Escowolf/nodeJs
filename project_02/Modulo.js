@@ -19,6 +19,6 @@ app.listen(4000,function(erro){  // cria a aplicação na porta 4000 e chama a f
     if (erro){
         console.log("Erro ao Iniciar.");
     }else{
-        console.log("Servidor Iniciado na porta: http://localhost:3000/");
+        console.log("Servidor Iniciado na porta: http://localhost:4000/");
     }
 })
