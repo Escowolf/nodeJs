@@ -2,19 +2,26 @@ const express = require("express");//carregando módulo express do Node
 const app = express(); //instanciando o app para utilizar node
 
 app.get("/",function(req,res){
-    res.send("<h1>Hello World! Query params</h1>");
+    res.send("<h1>Query params</h1>");
 });
 
-app.get("/consulta/:nome/",function(req,res){
-    res.send("<h1>Página inicial de nodeJs <br> Olá, "+req.params.nome+"<h1>");
+app.get("/pessoa/:nome/",function(req,res){
+    res.send("<h1>Consulta nome</h1> <br> <h2>Olá, "+req.params.nome+"!<\h2>");
 });
 
-app.get("/consulta/idade/", function(req,res){
+app.get("/idade/", function(req,res){
     //req --> dados enviados pelo cliente
-    var idade = req.query["idade"];
+    var id = req.query["id"];
 
-    //res --> resposta enviada pelo servidor de volta ao cliente
-    res.send("Sua idade é = " + idade);
+    if (id<18){
+        res.send("<h1>Você é de menor! Não pode acessar essa página.</h1>")
+    }else if(id>=18){
+        //res --> resposta enviada pelo servidor de volta ao cliente
+        res.send("<h1>Mesmo depois dos 18 você ainda é jovem,<br> afinal são apenas "+id+" anos!</h1>");
+    }else{
+        console.log("Nenhum valor foi digitado!")
+    }
+   
     
 })
 
